@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CampusShelf — Pass your textbooks on</title>
+<meta name="description" content="A college-only book exchange. Students, teachers and alumni pass textbooks to the next batch.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+
+<section class="hero">
+  <div class="container hero-in">
+    <div>
+      <span class="badge amber" style="margin-bottom:18px">📖 Made for your campus</span>
+      <h1>Every textbook deserves a <em>second semester</em>.</h1>
+      <p class="lead">Seniors, teachers, staff and alumni pass the books they no longer need to the next batch. Pick one up at a campus pickup point, with a clear condition rating so you know what you are getting.</p>
+      <div class="hero-cta">
+        <a class="btn btn-amber" href="browse.html">Browse books →</a>
+        <a class="btn btn-ghost" href="add-book.html">Donate a book</a>
+      </div>
+      <div class="hero-tags"><span>✔ College members only</span><span>✔ Free, low price, exchange or lend</span><span>✔ Safe pickup points</span></div>
+    </div>
+    <div class="stack" id="heroStack" aria-hidden="true"></div>
+  </div>
+</section>
+
+<div class="container stats"><div class="grid g4">
+  <div class="stat reveal"><b data-count="listed">0</b><span>Books listed</span></div>
+  <div class="stat reveal"><b data-count="passed">0</b><span>Books passed on</span></div>
+  <div class="stat reveal"><b data-count="members">0</b><span>Campus members</span></div>
+  <div class="stat reveal"><b data-count="saved" data-prefix="₹">0</b><span>Saved by students</span></div>
+</div></div>
+
+<section class="section">
+  <div class="container center">
+    <span class="eyebrow">How it works</span>
+    <div class="sec-head"><h2>Simple for givers. Simple for receivers.</h2><p class="muted">Pick your side and see the steps.</p></div>
+    <div class="switch" id="howSwitch"><button class="active" data-t="get">I need books</button><button data-t="give">I have books</button></div>
+    <div class="grid g3" id="howSteps" style="text-align:left"></div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Fresh on the shelf</span><h2>Recently added books</h2><p class="muted">The newest books from seniors, faculty and alumni.</p></div>
+    <div class="grid g3" id="featured"></div>
+    <div class="center" style="margin-top:34px"><a class="btn btn-outline" href="browse.html">See all books</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">The pass-it-forward chain</span><h2>One book. Many students.</h2>
+      <p class="muted">Every book keeps a history of the people it has helped, so each handover feels like part of something bigger.</p></div>
+    <div class="chain reveal">
+      <div class="link"><div class="dot">👩‍🏫</div>Teacher buys it</div><div class="arrow">→</div>
+      <div class="link"><div class="dot">🎓</div>Senior uses it</div><div class="arrow">→</div>
+      <div class="link"><div class="dot">📘</div>Junior learns</div><div class="arrow">→</div>
+      <div class="link"><div class="dot">🔁</div>Passed again</div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Built for everyone on campus</span><h2>Anyone can give. Anyone can get.</h2></div>
+    <div class="grid g4">
+      <div class="card hover reveal"><div class="icon-bubble">🎓</div><h3 style="font-size:1.15rem">Students</h3><p class="muted" style="margin-top:6px">Pass on last semester's books and earn karma points for claiming the next ones.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">👩‍🏫</div><h3 style="font-size:1.15rem">Teachers</h3><p class="muted" style="margin-top:6px">Donate reference copies, lend books for a semester and pin faculty picks for each subject.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">🧑‍💼</div><h3 style="font-size:1.15rem">Staff</h3><p class="muted" style="margin-top:6px">Clear shelves and offices of spare books and put them into students' hands.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">🏅</div><h3 style="font-size:1.15rem">Alumni</h3><p class="muted" style="margin-top:6px">Give back to the college with the books and notes that helped you graduate.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Why it feels trustworthy</span><h2>Features that make handovers easy</h2></div>
+    <div class="grid g3">
+      <div class="card hover reveal"><div class="icon-bubble">🔍</div><h3 style="font-size:1.1rem">Honest condition ratings</h3><p class="muted" style="margin-top:6px">Like New, Good, Fair or Heavy Notes, shown with a simple dot meter so there are no surprises.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">📍</div><h3 style="font-size:1.1rem">Fixed pickup points</h3><p class="muted" style="margin-top:6px">Meet at the library gate, canteen or department office during set time slots.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">✨</div><h3 style="font-size:1.1rem">Karma points</h3><p class="muted" style="margin-top:6px">Donate to earn points and spend them on books, which keeps the shelf full.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">⭐</div><h3 style="font-size:1.1rem">Faculty picks</h3><p class="muted" style="margin-top:6px">See which books teachers actually recommend for each subject.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">🔔</div><h3 style="font-size:1.1rem">Wishlist alerts</h3><p class="muted" style="margin-top:6px">Ask for a book that is not listed yet and see it in your dashboard when it appears.</p></div>
+      <div class="card hover reveal"><div class="icon-bubble">⏳</div><h3 style="font-size:1.1rem">Lend for a semester</h3><p class="muted" style="margin-top:6px">Teachers can lend costly reference books and mark them returned when they are back.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="card reveal" style="background:linear-gradient(135deg,var(--navy),var(--navy-2));border:0;text-align:center;padding:54px 24px">
+      <h2 style="color:#fff;font-size:2rem">Clear your shelf. Fill someone's bag.</h2>
+      <p style="color:#B9CFE0;margin:12px auto 26px;max-width:520px">List your first book in under two minutes.</p>
+      <a class="btn btn-amber" href="add-book.html">Donate a book</a> <a class="btn btn-ghost" href="auth.html?tab=register">Create free account</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

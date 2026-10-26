@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Donate a Book — CampusShelf</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<section class="page-head"><div class="container">
+  <h1>List a book</h1><p>Takes about two minutes. Students, teachers, staff and alumni can all give.</p>
+</div></section>
+
+<div class="container form-layout">
+  <form class="card" id="form" novalidate>
+    <div class="row2">
+      <div class="field"><label class="lbl" for="title">Book title *</label><input class="input" id="title" placeholder="e.g. Operating System Concepts"></div>
+      <div class="field"><label class="lbl" for="author">Author</label><input class="input" id="author" placeholder="e.g. Silberschatz"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label class="lbl" for="subject">Subject *</label><input class="input" id="subject" placeholder="e.g. Operating Systems"></div>
+      <div class="field"><label class="lbl" for="branch">Branch *</label><select class="input" id="branch"></select></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label class="lbl" for="sem">Semester *</label><select class="input" id="sem"></select></div>
+      <div class="field"><label class="lbl" for="pickup">Pickup point *</label><select class="input" id="pickup"></select></div>
+    </div>
+
+    <div class="field"><label class="lbl">Condition *</label><div class="opt-grid" id="condOpts"></div></div>
+    <div class="field"><label class="lbl">How do you want to give it? *</label><div class="opt-grid" id="modeOpts"></div></div>
+
+    <div class="row2">
+      <div class="field" id="priceField" style="display:none"><label class="lbl" for="price">Price (₹)</label><input class="input" id="price" type="number" min="1" placeholder="e.g. 200"></div>
+      <div class="field" id="lendField" style="display:none"><label class="lbl" for="lendDays">Lend for (days)</label><input class="input" id="lendDays" type="number" min="7" value="90"></div>
+    </div>
+
+    <div class="field"><label class="lbl">Cover photo (optional)</label>
+      <div class="dropzone" id="drop">📷 Click to upload a photo of the cover<input type="file" id="photo" accept="image/*" hidden></div></div>
+    <div class="field"><label class="lbl" for="notes">Notes for the next reader</label><textarea class="input" id="notes" placeholder="Edition, highlighted chapters, any notes or past papers you are including…"></textarea></div>
+
+    <label class="check" id="recWrap" style="display:none;margin-bottom:16px"><input type="checkbox" id="rec"> ⭐ Mark as <b>recommended for this subject</b> (faculty pick)</label>
+    <div class="error" id="err"></div>
+    <button class="btn btn-primary" type="submit" style="margin-top:8px">Publish book</button>
+  </form>
+
+  <aside class="preview-box">
+    <p class="muted" style="margin-bottom:10px;font-weight:600">Live preview</p>
+    <div id="preview"></div>
+    <div class="card" style="margin-top:18px;background:var(--amber-l);border-color:#f2dcb0">
+      <b>✨ Earn karma</b><p style="font-size:.9rem;color:#6b4a10">You get <b>+10 karma</b> every time a book you listed reaches a new owner.</p></div>
+  </aside>
+</div>
+
+<div id="footer"></div>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/add-book.js"></script>
+</body>
+</html>

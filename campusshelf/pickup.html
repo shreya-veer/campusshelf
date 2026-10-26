@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pickup Points — CampusShelf</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<section class="page-head"><div class="container">
+  <h1>Campus pickup points</h1><p>Safe, well-lit places to hand over a book. Tap a pin to see time slots and the books waiting there.</p>
+</div></section>
+
+<div class="container pickup">
+  <div class="map" id="map">
+    <svg viewBox="0 0 160 110" preserveAspectRatio="none" aria-hidden="true">
+      <rect width="160" height="110" fill="#E7F1EF"/>
+      <path d="M0 62 C40 52 70 74 160 58" stroke="#fff" stroke-width="7" fill="none"/>
+      <path d="M62 0 C58 30 66 60 60 110" stroke="#fff" stroke-width="6" fill="none"/>
+      <rect x="14" y="58" width="30" height="20" rx="3" fill="#CFE3DF"/><rect x="92" y="10" width="40" height="22" rx="3" fill="#CFE3DF"/>
+      <rect x="100" y="72" width="34" height="22" rx="3" fill="#CFE3DF"/><rect x="10" y="12" width="36" height="24" rx="3" fill="#CFE3DF"/>
+      <circle cx="132" cy="50" r="10" fill="#BFE0C9"/><circle cx="36" cy="94" r="9" fill="#BFE0C9"/>
+    </svg>
+  </div>
+  <div id="side"></div>
+</div>
+
+<div id="footer"></div>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/pickup.js"></script>
+</body>
+</html>

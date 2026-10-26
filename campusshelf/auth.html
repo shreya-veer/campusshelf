@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Log in or Join — CampusShelf</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<div class="auth-wrap">
+  <div class="auth-side">
+    <h2>Welcome to your campus book exchange</h2>
+    <ul>
+      <li>📚 Get textbooks from the batch before you</li>
+      <li>🎁 Donate books and earn karma points</li>
+      <li>⭐ See what your teachers recommend</li>
+      <li>📍 Meet safely at campus pickup points</li>
+    </ul>
+  </div>
+  <div class="auth-main">
+    <div class="auth-box">
+      <div class="seg" id="seg"><button class="active" data-t="login">Log in</button><button data-t="register">Create account</button></div>
+
+      <form id="loginForm" novalidate>
+        <div class="field"><label class="lbl" for="lemail">College email</label><input class="input" id="lemail" type="email" placeholder="you@college.edu"></div>
+        <div class="field"><label class="lbl" for="lpw">Password</label><input class="input" id="lpw" type="password" placeholder="••••••"></div>
+        <div class="error" id="lerr"></div>
+        <button class="btn btn-primary btn-block" style="margin-top:10px">Log in</button>
+        <div class="demo-box"><b>Try a demo account</b><br>
+          Student: demo@college.edu / demo123<br>Teacher: prof@college.edu / prof123
+          <div style="margin-top:8px;display:flex;gap:8px"><button type="button" class="btn btn-sm btn-amber" data-demo="demo@college.edu|demo123">Use student</button><button type="button" class="btn btn-sm btn-amber" data-demo="prof@college.edu|prof123">Use teacher</button></div></div>
+      </form>
+
+      <form id="regForm" novalidate style="display:none">
+        <div class="field"><label class="lbl" for="rname">Full name *</label><input class="input" id="rname"></div>
+        <div class="field"><label class="lbl" for="remail">College email *</label><input class="input" id="remail" type="email" placeholder="you@college.edu"></div>
+        <div class="field"><label class="lbl" for="rpw">Password * (min 6 characters)</label><input class="input" id="rpw" type="password"></div>
+        <div class="field"><label class="lbl">I am a…</label><div class="opt-grid" id="roles"></div></div>
+        <div class="row2" id="studentFields">
+          <div class="field"><label class="lbl" for="rbranch">Branch</label><select class="input" id="rbranch"></select></div>
+          <div class="field"><label class="lbl" for="ryear">Year</label><select class="input" id="ryear"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+        </div>
+        <div class="field" id="deptField" style="display:none"><label class="lbl" for="rdept">Department</label><select class="input" id="rdept"></select></div>
+        <div class="error" id="rerr"></div>
+        <button class="btn btn-primary btn-block" style="margin-top:10px">Create account · get 20 karma</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

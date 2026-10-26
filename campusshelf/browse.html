@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Browse Books — CampusShelf</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<section class="page-head"><div class="container">
+  <h1>Browse books</h1><p>Find the textbooks your batch has already finished with.</p>
+</div></section>
+
+<div class="container browse">
+  <aside class="filters card">
+    <div><h4>Search</h4><input class="input" id="q" placeholder="Title, author or subject"></div>
+    <div><h4>Branch</h4><select class="input" id="branch"><option value="">All branches</option></select></div>
+    <div><h4>Semester</h4><select class="input" id="sem"><option value="">All semesters</option></select></div>
+    <div><h4>Condition</h4><div id="conds"></div></div>
+    <div><h4>Type</h4><div id="modes"></div></div>
+    <div><label class="check"><input type="checkbox" id="rec"> ⭐ Faculty picks only</label>
+         <label class="check"><input type="checkbox" id="avail" checked> Available only</label></div>
+    <button class="btn btn-outline btn-sm btn-block" id="clear">Clear filters</button>
+  </aside>
+  <main>
+    <div class="toolbar">
+      <b id="count"></b>
+      <select class="input" id="sort" style="width:auto"><option value="new">Newest first</option><option value="cond">Best condition</option><option value="price">Lowest price</option><option value="az">Title A–Z</option></select>
+    </div>
+    <div class="grid g3" id="results"></div>
+  </main>
+</div>
+
+<div id="footer"></div>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/browse.js"></script>
+</body>
+</html>
